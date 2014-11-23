@@ -26,14 +26,15 @@ The tidy data set contains four variables:
     
     * mean(): Mean value
     * std(): Standard deviation
+    
   - average: type num. Is the mean of the measurement of each signal.
   
 We must perform the next steps to tidy the data:
 
-  1) First we set the working directory to the local directory where we are downloaded and unzipped the original data.
-  2) We've got two datasets: test and train. We stablish the column names of this data set from 'features'.
-  3) Next we add the 'activity' column to both data sets. We change the numeric values of this column to the corresponding character description.
-  4) We add the 'subject' column to both data sets and we stablish both columns names.
-  5) Merge both data sets (test and train) to obtain an unique data set called 'data'.
-  6) We make use of the tidyr and dplyr libraries to obtain a final tidy data set.
-  7) To tidy the data, we first gather the signal columns into a unique column called 'signal', then we group by 'subject', 'activity' and 'signal' columns in this order. Next we mutate the data set to create a new column with the mean of the value colum, then we select all the columns except value and finally we erase the duplicates rows.
+  - First we set the working directory to the local directory where we are downloaded and unzipped the original data.
+  - We've got two datasets: test and train. We stablish the column names of this data set from 'features'.
+  - Next we add the 'activity' column to both data sets. We change the numeric values of this column to the corresponding character description.
+  - We add the 'subject' column to both data sets and we stablish both columns names.
+  - Merge both data sets (test and train) to obtain an unique data set called 'data'.
+  - We make use of the tidyr and dplyr libraries to obtain a final tidy data set.
+  - To tidy the data, we first gather the signal columns into a unique column called 'signal', then we group by 'subject', 'activity' and 'signal' columns in this order. Next we mutate the data set to create a new column with the mean of the value colum, then we select all the columns except value and finally we erase the duplicates rows.
